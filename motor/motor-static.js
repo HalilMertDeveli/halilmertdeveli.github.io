@@ -49,6 +49,8 @@
         if (/add-to-cart/.test(target)) store.set(true);
         if (!store.get()) target = target.replace('cartsummary.json', 'cartsummary-empty.json').replace('offcanvas-cart.html', 'offcanvas-cart-empty.html');
 
+        // Captured fragments carry __MOTOR_ROOT__ in links and images (see fix-static.mjs).
+        options.dataFilter = function (data) { return typeof data === 'string' ? data.split('__MOTOR_ROOT__').join(root) : data; };
         options.url = root + target;
         options.type = 'GET';
         options.method = 'GET';
