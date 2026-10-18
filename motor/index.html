@@ -1,0 +1,1703 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<title>MOTOR Vitrin</title>
+<meta name="description" content="MOTOR motosiklet parça ve ekipman mağazası – arayüz önizlemesi">
+<meta name="theme-color" content="#08090b">
+<link rel="stylesheet" href="lib/fa7/css/all.css">
+<link rel="stylesheet" href="lib/fontastic/fontastic.css">
+<link rel="stylesheet" href="themes/motordark/theme.css">
+<style>
+:root { color-scheme: dark; }
+html, body { background: #08090b; }
+/* Preview only: nothing behind links and forms, so don't suggest otherwise on hover */
+a[href="#"] { cursor: default; }
+</style>
+<script>
+document.documentElement.lang = 'tr';
+document.documentElement.className = "wkit not-framed" + ' motor-js';
+document.body.className = "home motor-home lyt-cols-1 motor";
+</script>
+
+    
+    
+
+
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="motor-icon-sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+        <symbol id="mi-engine" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="15" y="6" width="18" height="16" rx="2"></rect><path d="M15 11h18M15 16h18"></path><path d="M19 22v6M29 22v6"></path><circle cx="24" cy="36" r="7"></circle><path d="M24 29v-1M17 36h-4M35 36h-4"></path><circle cx="24" cy="36" r="2"></circle></g></symbol>
+        <symbol id="mi-gear" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="20" r="9"></circle><circle cx="18" cy="20" r="3"></circle><path d="M18 7v4M18 29v4M5 20h4M27 20h4M8.8 10.8l2.8 2.8M24.4 26.4l2.8 2.8M8.8 29.2l2.8-2.8M24.4 13.6l2.8-2.8"></path><circle cx="34" cy="35" r="6"></circle><circle cx="34" cy="35" r="2"></circle><path d="M34 26v3M34 41v3M25 35h3M40 35h3"></path></g></symbol>
+        <symbol id="mi-brake" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="26" r="16"></circle><circle cx="22" cy="26" r="5"></circle><circle cx="22" cy="14" r="1.2"></circle><circle cx="32" cy="22" r="1.2"></circle><circle cx="12" cy="22" r="1.2"></circle><circle cx="16" cy="35" r="1.2"></circle><circle cx="28" cy="35" r="1.2"></circle><path d="M30 6.5c5.5 1.8 9.8 6 11.6 11.5L36 21c-1-3.6-3.6-6.6-7-8.2z"></path></g></symbol>
+        <symbol id="mi-bolt" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M27 4 11 27h11l-3 17 18-24H25z"></path></g></symbol>
+        <symbol id="mi-fuel" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 42V10a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4v32"></path><path d="M5 42h28M13 13h12v9H13z"></path><path d="M30 18h4a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0 5 0V17l-5-6"></path></g></symbol>
+        <symbol id="mi-exhaust" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 32c6 0 8-10 14-10h8"></path><rect x="26" y="16" width="16" height="12" rx="6"></rect><path d="M42 22h2M32 16v12"></path><path d="M8 38c3-1 6-1 9 0M20 40c2-1 5-1 7 0" opacity=".7"></path></g></symbol>
+        <symbol id="mi-suspension" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="7" r="3"></circle><circle cx="24" cy="41" r="3"></circle><path d="M24 10v4M24 34v4"></path><path d="M16 14h16l-16 4h16l-16 4h16l-16 4h16l-16 4h16"></path></g></symbol>
+        <symbol id="mi-fairing" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 32c4-12 14-20 28-22l6 2-4 8c-6 0-12 3-16 10l-2 4H6z"></path><path d="M32 12l-4 8M20 30h-8"></path><path d="M36 20l6 4" opacity=".7"></path></g></symbol>
+        <symbol id="mi-tire" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="19"></circle><circle cx="24" cy="24" r="12"></circle><circle cx="24" cy="24" r="3"></circle><path d="M24 12v9M24 27v9M12 24h9M27 24h9"></path><path d="M10.6 10.6l2.4 2.4M35 35l2.4 2.4M37.4 10.6 35 13M13 35l-2.4 2.4"></path></g></symbol>
+        <symbol id="mi-oil" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h24l10-6v4l-10 10v10H8z"></path><path d="M14 20v-4h8v4M4 22h4"></path><path d="M42 26c0 2-1.4 4-3 4s-3-2-3-4 3-6 3-6 3 4 3 6z"></path></g></symbol>
+        <symbol id="mi-helmet" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30C6 17 15 8 27 8c9 0 16 7 16 16v4c0 6-4 10-10 10H12a6 6 0 0 1-6-6z"></path><path d="M43 24H27a4 4 0 0 0-4 4v2h20"></path><path d="M12 38v2M12 22c2-5 6-8 11-9"></path></g></symbol>
+        <symbol id="mi-tool" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M29 7a9 9 0 0 0-8.4 12.3L6.5 33.4a3.5 3.5 0 0 0 5 5l14.1-14.1A9 9 0 0 0 38 16l-6 6-5-5 6-6a9 9 0 0 0-4-4z"></path></g></symbol>
+        <symbol id="mi-light" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10c-8 0-14 6-14 14s6 14 14 14z"></path><path d="M22 10h4a4 4 0 0 1 4 4v20a4 4 0 0 1-4 4h-4"></path><path d="M36 14l8-3M36 24h8M36 34l8 3"></path></g></symbol>
+        <symbol id="mi-jacket" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6l6 5 6-5 9 5 4 25h-7l-2-14v20H14V22l-2 14H5l4-25z"></path><path d="M24 11v31M19 26h-2M31 26h-2"></path></g></symbol>
+        <symbol id="mi-shield" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4 8 10v12c0 10 7 18 16 22 9-4 16-12 16-22V10z"></path><path d="m17 24 5 5 9-10"></path></g></symbol>
+        <symbol id="mi-truck" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h24v20H4zM28 19h8l6 7v6H28z"></path><circle cx="12" cy="35" r="4"></circle><circle cx="35" cy="35" r="4"></circle></g></symbol>
+        <symbol id="mi-return" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18h22a10 10 0 0 1 0 20H18"></path><path d="m17 10-8 8 8 8"></path></g></symbol>
+        <symbol id="mi-headset" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 28v-4a16 16 0 0 1 32 0v4"></path><rect x="6" y="26" width="8" height="12" rx="3"></rect><rect x="34" y="26" width="8" height="12" rx="3"></rect><path d="M38 38c0 4-4 6-10 6h-3"></path></g></symbol>
+        <symbol id="mi-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"></path></g></symbol>
+        <symbol id="mi-grid" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="14" height="14" rx="2"></rect><rect x="27" y="7" width="14" height="14" rx="2"></rect><rect x="7" y="27" width="14" height="14" rx="2"></rect><rect x="27" y="27" width="14" height="14" rx="2"></rect></g></symbol>
+    </defs>
+</svg>
+
+
+<a href="#content-center" id="skip-to-content" class="btn-skip-content btn btn-primary btn-lg">
+    Ana içeriğe geç
+</a>
+
+<div id="page">
+    
+
+    <div class="page-main canvas-slidable">
+
+        
+
+        <header class="motor-header" id="header" style="">
+            <div class="menubar-section d-none d-lg-block menubar-inverse">
+                <div class="container menubar-container">
+                    
+
+
+
+<nav class="menubar navbar navbar-slide">
+
+    <div class="menubar-group ml-0">
+
+
+<div class="dropdown">
+    <button id="language-selector" type="button" class="menubar-link reset" data-toggle="dropdown" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="language-options" aria-label="Güncel dil Türkçe - Dili değiştir">
+        <span aria-hidden="true">TR</span>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </button>
+    <div id="language-options" class="dropdown-menu" aria-labelledby="language-selector" role="listbox">
+            <a role="option" href="#" title="Türkçe (TR)" rel="nofollow" class="dropdown-item disabled" data-selected="true" data-abbreviation="Türkçe" aria-selected="true" aria-current="page" aria-disabled="false">
+                    <img src="images/flags/tr.png" role="presentation">
+                <span>Türkçe</span>
+            </a>
+            <a role="option" href="#" title="English (EN)" rel="nofollow" class="dropdown-item" data-selected="false" data-abbreviation="English">
+                    <img src="images/flags/us.png" role="presentation">
+                <span>English</span>
+            </a>
+    </div>
+</div>    </div>
+
+    <div class="menubar-group ml-auto">
+        
+
+            <a class="menubar-link" href="#">Bize Ulaşın</a>
+
+        
+
+
+<div class="cms-menu cms-menu-dropdown" data-menu-name="helpandservice">
+    <div class="dropdown">
+        <a id="helpandservice-opener" data-toggle="dropdown" aria-haspopup="listbox" aria-expanded="false" href="#" rel="nofollow" class="menubar-link">
+            <span>Service</span>
+            <i class="fal fa-angle-down menubar-caret"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="helpandservice-opener" role="listbox">
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>What's New</span>
+                </a>
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>Recently viewed products</span>
+                </a>
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>Compare products list</span>
+                </a>
+                        <div class="dropdown-divider"></div>
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>About Us</span>
+                </a>
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>Disclaimer</span>
+                </a>
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>Shipping &amp; Returns</span>
+                </a>
+                <a href="#" role="option" class="dropdown-item menu-link">
+                    <span>Conditions of use</span>
+                </a>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+
+    
+
+    <div id="menubar-my-account" class="menubar-group">
+        <div class="dropdown">
+            <a class="menubar-link" aria-haspopup="true" aria-expanded="false" href="#" rel="nofollow">
+                <i class="fal fa-user-circle menubar-icon"></i>
+
+                    <span>Giriş yap</span>
+            </a>
+
+        </div>
+        
+    </div>
+
+    
+
+</nav>
+
+
+                </div>
+            </div>
+            <div class="shopbar-section shopbar-inverse">
+                <div class="container shopbar-container">
+                    
+<div class="shopbar">
+    <div class="shopbar-col-group shopbar-col-group-brand">
+        <div class="shopbar-col shop-logo">
+            
+
+<a class="brand textual motor-wordmark" aria-label="MotoParça" href="#">
+        <span class="motor-wordmark-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 24" width="40" height="24" focusable="false"><path d="M2 22 14 2h8L10 22zM16 22 28 2h8L24 22z" fill="currentColor"></path></svg>
+        </span>
+        <span class="motor-wordmark-text" aria-hidden="true">MOTOR</span>
+</a>
+
+        </div>
+        <div class="shopbar-col shopbar-search">
+            
+                
+
+
+<form action="#" class="instasearch-form has-icon" method="get" role="search">
+    <span id="instasearch-desc-search-search" class="sr-only">
+        Bir arama terimi girin. İlk sonuçlar siz yazdıkça otomatik olarak görünür. Tüm sonuçları çağırmak için Enter tuşuna basın.
+    </span>
+    <input type="search" class="instasearch-term form-control text-truncate" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="instasearch-drop-body" name="q" placeholder="Ne arıyorsunuz?" aria-label="Ne arıyorsunuz?" aria-describedby="instasearch-desc-search-search" data-instasearch="true" data-minlength="2" data-showthumbs="true" data-url="/instantsearch/" data-origin="Search/Search" autocomplete="off">
+
+    <div class="instasearch-addon d-flex align-items-center justify-content-center">
+        <button type="button" class="instasearch-clear input-clear" aria-label="Arama terimini sil">
+            <i class="fa fa-xmark"></i>
+        </button>
+    </div>
+    <span class="input-group-icon instasearch-icon">
+        <button type="submit" class="instasearch-submit input-clear bg-transparent" tabindex="-1" aria-hidden="true">
+            <i class="fa fa-magnifying-glass"></i>
+        </button>
+    </span>
+    
+
+    
+</form>
+            
+        </div>
+    </div>
+
+    <div class="shopbar-col-group shopbar-col-group-tools">
+        
+
+<div class="shopbar-col shopbar-tools" data-summary-href="/shoppingcart/cartsummary/?cart=True&amp;wishlist=True&amp;compare=True" style="--sb-tool-padding-x: 0.25rem">
+
+    <div class="shopbar-tool d-lg-none" id="shopbar-menu">
+        <a id="offcanvas-menu-opener" class="shopbar-button" href="#" data-placement="start" data-target="#offcanvas-menu" aria-controls="offcanvas-menu" aria-expanded="false" data-autohide="true" data-disablescrolling="true" data-fullscreen="false" data-toggle="offcanvas">
+            <span class="shopbar-button-icon" aria-hidden="true">
+                <i class="icm icm-menu"></i>
+            </span>
+            <span class="shopbar-button-label-sm">
+                Menü
+            </span>
+        </a>
+    </div>
+
+    
+
+    <div class="shopbar-tool d-lg-none" id="shopbar-user">
+        <a class="shopbar-button" href="#">
+            <span class="shopbar-button-icon" aria-hidden="true">
+                <i class="icm icm-user"></i>
+            </span>
+            <span class="shopbar-button-label-sm">
+                Giriş yap
+            </span>
+        </a>
+    </div>
+
+    <div class="shopbar-tool" id="shopbar-compare" data-target="#compare-tab">
+        <a data-summary-href="/shoppingcart/cartsummary/?compare=True" aria-controls="offcanvas-cart" aria-expanded="false" class="shopbar-button navbar-toggler" data-autohide="true" data-disablescrolling="true" data-fullscreen="false" data-placement="end" data-target="#offcanvas-cart" data-toggle="offcanvas" href="#">
+            <span class="shopbar-button-icon" aria-hidden="true">
+                <i class="icm icm-repeat"></i>
+                <span class="badge badge-pill badge-counter badge-counter-ring label-cart-amount badge-primary" data-bind-to="CompareItemsCount" style="display: none">0</span>
+            </span>
+            <span class="shopbar-button-label" aria-label="Karşılaştırma">
+                <span>Karşılaştır</span><br>
+                <strong>Ürünler</strong>
+            </span>
+            <span class="shopbar-button-label-sm">
+                Karşılaştırma
+            </span>
+        </a>
+    </div>
+
+    <div class="shopbar-tool" id="shopbar-wishlist" data-target="#wishlist-tab">
+        <a data-summary-href="/shoppingcart/cartsummary/?wishlist=True" aria-controls="offcanvas-cart" aria-expanded="false" class="shopbar-button navbar-toggler" data-autohide="true" data-disablescrolling="true" data-fullscreen="false" data-placement="end" data-target="#offcanvas-cart" data-toggle="offcanvas" href="#">
+            <span class="shopbar-button-icon" aria-hidden="true">
+                <i class="icm icm-heart"></i>
+                <span class="badge badge-pill badge-counter badge-counter-ring label-cart-amount badge-primary" data-bind-to="WishlistItemsCount" style="display: none">0</span>
+            </span>
+            <span class="shopbar-button-label" aria-label="Favori Listesi">
+                <span>Favori</span><br>
+                <strong>Liste</strong>
+            </span>
+            <span class="shopbar-button-label-sm">
+                Favori Listesi
+            </span>
+        </a>
+    </div>
+
+    <div class="shopbar-tool" id="shopbar-cart" data-target="#cart-tab">
+        <a data-summary-href="/shoppingcart/cartsummary/?cart=True" aria-controls="offcanvas-cart" aria-expanded="false" class="shopbar-button navbar-toggler" data-autohide="true" data-disablescrolling="true" data-fullscreen="false" data-placement="end" data-target="#offcanvas-cart" data-toggle="offcanvas" href="#">
+            <span class="shopbar-button-icon" aria-hidden="true">
+                <i class="icm icm-bag"></i>
+                <span class="badge badge-pill badge-counter badge-counter-ring label-cart-amount badge-primary" data-bind-to="CartItemsCount" style="display: none">0</span>
+            </span>
+            <span class="shopbar-button-label" aria-label="Sepet">
+                <span>Alışveriş</span><br>
+                <strong>Sepet</strong>
+            </span>
+            <span class="shopbar-button-label-sm">
+                Sepet
+            </span>
+        </a>
+    </div>
+
+    
+</div>
+
+
+
+
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="megamenu-section d-none d-lg-block">
+                <nav class="navbar navbar-inverse" aria-label="Ana navigasyon">
+                    <div class="container megamenu-container show-scroll-buttons">
+                        
+
+
+<div class="megamenu simple megamenu-blend--next">
+
+
+
+
+
+
+<div class="cms-menu cms-menu-navbar" data-menu-name="main">
+    <div class="megamenu-nav megamenu-nav--prev alpha">
+        <a href="#" class="megamenu-nav-btn btn btn-clear-dark btn-icon btn-sm" tabindex="-1" aria-hidden="true">
+            <i class="far fa-chevron-left megamenu-nav-btn-icon"></i>
+        </a>
+    </div>
+
+    <div class="nav-slider position-relative" style="overflow-x: hidden"><ul class="navbar-nav nav flex-row flex-nowrap" id="menu-main" role="menubar">
+
+            <li id="main-nav-item-426607" data-id="426607" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426607" href="#" aria-controls="dropdown-menu-426607" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426607" role="menuitem" tabindex="0">
+                    <span>Motor Parçaları</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426612" data-id="426612" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426612" href="#" aria-controls="dropdown-menu-426612" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426612" role="menuitem" tabindex="-1">
+                    <span>Şanzıman &amp; Aktarma</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426616" data-id="426616" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426616" href="#" aria-controls="dropdown-menu-426616" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426616" role="menuitem" tabindex="-1">
+                    <span>Fren Sistemi</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426620" data-id="426620" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426620" href="#" aria-controls="dropdown-menu-426620" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426620" role="menuitem" tabindex="-1">
+                    <span>Elektrik &amp; Aydınlatma</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426625" data-id="426625" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426625" href="#" aria-controls="dropdown-menu-426625" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426625" role="menuitem" tabindex="-1">
+                    <span>Yakıt &amp; Hava Sistemi</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426629" data-id="426629" role="none" class="nav-item">
+                <a id="main-nav-item-link-426629" href="#" class="nav-link menu-link" role="menuitem" tabindex="-1">
+                    <span>Egzoz Sistemleri</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426630" data-id="426630" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426630" href="#" aria-controls="dropdown-menu-426630" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426630" role="menuitem" tabindex="-1">
+                    <span>Süspansiyon &amp; Direksiyon</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426634" data-id="426634" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426634" href="#" aria-controls="dropdown-menu-426634" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426634" role="menuitem" tabindex="-1">
+                    <span>Kaporta &amp; Grenaj</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426638" data-id="426638" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426638" href="#" aria-controls="dropdown-menu-426638" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426638" role="menuitem" tabindex="-1">
+                    <span>Lastik &amp; Jant</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426642" data-id="426642" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426642" href="#" aria-controls="dropdown-menu-426642" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426642" role="menuitem" tabindex="-1">
+                    <span>Yağ &amp; Bakım</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426646" data-id="426646" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426646" href="#" aria-controls="dropdown-menu-426646" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426646" role="menuitem" tabindex="-1">
+                    <span>Kask &amp; Sürücü Ekipmanı</span>
+                </a>
+            </li>
+            <li id="main-nav-item-426651" data-id="426651" role="none" class="nav-item dropdown-submenu">
+                <a id="main-nav-item-link-426651" href="#" aria-controls="dropdown-menu-426651" aria-expanded="false" aria-haspopup="menu" class="nav-link menu-link dropdown-toggle" data-target="#dropdown-menu-426651" role="menuitem" tabindex="-1">
+                    <span>Aksesuar</span>
+                </a>
+            </li>
+
+        
+    </ul></div>
+
+    <div class="megamenu-nav megamenu-nav--next omega">
+        <a href="#" class="megamenu-nav-btn btn btn-clear-dark btn-icon btn-sm" tabindex="-1" aria-hidden="true">
+            <i class="far fa-chevron-right megamenu-nav-btn-icon"></i>
+        </a>
+    </div>
+</div></div>
+
+<div class="megamenu-dropdown-container simple">
+        <div id="dropdown-menu-426607" data-id="426607" role="menu" aria-labelledby="main-nav-item-426607">
+<div class="dropdown-menu">            <div id="dropdown-item-426608" data-id="426608" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426608">
+                    <span>Piston &amp; Segman</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426609" data-id="426609" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426609">
+                    <span>Conta Takımları</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426610" data-id="426610" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426610">
+                    <span>Silindir &amp; Kapak</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426611" data-id="426611" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426611">
+                    <span>Krank &amp; Biyel</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426612" data-id="426612" role="menu" aria-labelledby="main-nav-item-426612">
+<div class="dropdown-menu">            <div id="dropdown-item-426613" data-id="426613" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426613">
+                    <span>Zincir &amp; Dişli Seti</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426614" data-id="426614" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426614">
+                    <span>Debriyaj</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426615" data-id="426615" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426615">
+                    <span>Şanzıman Parçaları</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426616" data-id="426616" role="menu" aria-labelledby="main-nav-item-426616">
+<div class="dropdown-menu">            <div id="dropdown-item-426617" data-id="426617" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426617">
+                    <span>Fren Balatası</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426618" data-id="426618" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426618">
+                    <span>Fren Diski</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426619" data-id="426619" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426619">
+                    <span>Fren Merkezi &amp; Hidrolik</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426620" data-id="426620" role="menu" aria-labelledby="main-nav-item-426620">
+<div class="dropdown-menu">            <div id="dropdown-item-426621" data-id="426621" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426621">
+                    <span>Akü</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426622" data-id="426622" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426622">
+                    <span>Buji</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426623" data-id="426623" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426623">
+                    <span>Far, Stop &amp; Sinyal</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426624" data-id="426624" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426624">
+                    <span>Marş &amp; Şarj Sistemi</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426625" data-id="426625" role="menu" aria-labelledby="main-nav-item-426625">
+<div class="dropdown-menu">            <div id="dropdown-item-426626" data-id="426626" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426626">
+                    <span>Hava Filtresi</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426627" data-id="426627" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426627">
+                    <span>Karbüratör &amp; Enjeksiyon</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426628" data-id="426628" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426628">
+                    <span>Yakıt Pompası</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426629" data-id="426629" role="menu" aria-labelledby="main-nav-item-426629">
+<div class="dropdown-menu"></div>        </div>
+        <div id="dropdown-menu-426630" data-id="426630" role="menu" aria-labelledby="main-nav-item-426630">
+<div class="dropdown-menu">            <div id="dropdown-item-426631" data-id="426631" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426631">
+                    <span>Amortisör</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426632" data-id="426632" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426632">
+                    <span>Ön Maşa Parçaları</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426633" data-id="426633" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426633">
+                    <span>Rulman &amp; Keçe</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426634" data-id="426634" role="menu" aria-labelledby="main-nav-item-426634">
+<div class="dropdown-menu">            <div id="dropdown-item-426635" data-id="426635" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426635">
+                    <span>Grenaj</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426636" data-id="426636" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426636">
+                    <span>Ayna</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426637" data-id="426637" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426637">
+                    <span>Sele</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426638" data-id="426638" role="menu" aria-labelledby="main-nav-item-426638">
+<div class="dropdown-menu">            <div id="dropdown-item-426639" data-id="426639" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426639">
+                    <span>Dış Lastik</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426640" data-id="426640" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426640">
+                    <span>İç Lastik</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426641" data-id="426641" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426641">
+                    <span>Jant</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426642" data-id="426642" role="menu" aria-labelledby="main-nav-item-426642">
+<div class="dropdown-menu">            <div id="dropdown-item-426643" data-id="426643" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426643">
+                    <span>Motor Yağı</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426644" data-id="426644" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426644">
+                    <span>Yağ Filtresi</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426645" data-id="426645" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426645">
+                    <span>Bakım &amp; Temizlik Ürünleri</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426646" data-id="426646" role="menu" aria-labelledby="main-nav-item-426646">
+<div class="dropdown-menu">            <div id="dropdown-item-426647" data-id="426647" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426647">
+                    <span>Kask</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426648" data-id="426648" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426648">
+                    <span>Mont &amp; Pantolon</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426649" data-id="426649" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426649">
+                    <span>Eldiven</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426650" data-id="426650" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426650">
+                    <span>Bot</span>
+                </a>
+            </div>
+</div>        </div>
+        <div id="dropdown-menu-426651" data-id="426651" role="menu" aria-labelledby="main-nav-item-426651">
+<div class="dropdown-menu">            <div id="dropdown-item-426652" data-id="426652" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426652">
+                    <span>Çanta &amp; Arka Çanta</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426653" data-id="426653" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426653">
+                    <span>Telefon Tutucu</span>
+                </a>
+            </div>
+            <div id="dropdown-item-426654" data-id="426654" role="none">
+                <a href="#" role="menuitem" class="dropdown-item" id="dropdown-item-link-426654">
+                    <span>Koruma Demirleri</span>
+                </a>
+            </div>
+</div>        </div>
+
+    
+</div>
+
+
+
+                    </div>
+                </nav>
+            </div>
+            <div class="motor-header-progress" aria-hidden="true"></div>
+        </header>
+
+        <div id="content-wrapper">
+
+            
+
+
+
+            
+    
+
+
+<section lang="tr" class="motor-hero" aria-labelledby="motor-hero-title" data-motor-hero="">
+    <div class="motor-hero-media" aria-hidden="true">
+        <picture>
+            <source media="(max-width: 767.98px)" srcset="themes/motordark/images/hero-mobile.jpg">
+            <img class="motor-hero-photo" src="themes/motordark/images/hero.jpg" alt="" width="2000" height="2667" fetchpriority="high" decoding="async" data-motor-parallax="0.18" style="--motor-parallax: 0.0px;">
+        </picture>
+        <div class="motor-hero-sweep"></div>
+        <div class="motor-hero-shade"></div>
+        <div class="motor-hero-grain"></div>
+    </div>
+
+    <div class="container motor-hero-container">
+        <div class="motor-hero-content">
+            <span class="motor-eyebrow motor-hero-eyebrow">Parça · Bakım · Ekipman</span>
+            <h1 id="motor-hero-title" class="motor-hero-title">
+                <span class="motor-hero-line"><span>Yola</span></span>
+                <span class="motor-hero-line"><span>hakim <em>ol.</em></span></span>
+            </h1>
+            <p class="motor-hero-subtitle">Motorunun performansını tamamlayan parçalar ve ekipmanlar.</p>
+            <div class="motor-hero-actions">
+                <a href="#motor-featured" class="btn btn-primary btn-motor">
+                    <span>Ürünleri Keşfet</span>
+                    <svg class="motor-btn-arrow" aria-hidden="true"><use href="#mi-arrow"></use></svg>
+                </a>
+                <a href="#motor-categories" class="btn btn-motor btn-motor-ghost">
+                    <span>Kategorilere Göz At</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="#motor-categories" class="motor-hero-scroll" aria-label="Kategorilere in">
+        <span class="motor-hero-scroll-line" aria-hidden="true"></span>
+        <span class="motor-hero-scroll-label" aria-hidden="true">Kaydır</span>
+    </a>
+</section>
+
+
+
+            <section id="content" class="container">
+                
+
+                
+
+
+
+                <div id="content-body" class="row">
+
+
+                    <main id="content-center" class="col-lg-12">
+                        
+                        
+
+
+
+<div class="page home-page">
+    <div class="page-body">
+        
+
+        
+
+        <section id="motor-categories" class="motor-section" aria-labelledby="motor-categories-title">
+            <div lang="tr" class="motor-section-head" data-motor-reveal="">
+                <div>
+                    <span class="motor-eyebrow">Kategoriler</span>
+                    <h2 id="motor-categories-title" class="motor-section-title">Sürüşüne göre seç</h2>
+                </div>
+                <p class="motor-section-lead">Motor parçasından sürücü ekipmanına, ihtiyacın olan her şey tek bir garajda.</p>
+            </div>
+
+
+
+    <div role="list" class="motor-cat-grid" data-motor-stagger="" aria-label="En çok satan ürün grupları">
+            <div role="listitem" class="motor-cat" data-id="25" style="--motor-i: 0;">
+                <a class="motor-cat-link" href="#" title="Motor Parçaları kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">01</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-engine"></use></svg>
+
+                    <span class="motor-cat-name">Motor Parçaları</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="30" style="--motor-i: 1;">
+                <a class="motor-cat-link" href="#" title="Şanzıman &amp; Aktarma kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">02</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-gear"></use></svg>
+
+                    <span class="motor-cat-name">Şanzıman &amp; Aktarma</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="34" style="--motor-i: 2;">
+                <a class="motor-cat-link" href="#" title="Fren Sistemi kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">03</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-brake"></use></svg>
+
+                    <span class="motor-cat-name">Fren Sistemi</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="38" style="--motor-i: 3;">
+                <a class="motor-cat-link" href="#" title="Elektrik &amp; Aydınlatma kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">04</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-light"></use></svg>
+
+                    <span class="motor-cat-name">Elektrik &amp; Aydınlatma</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="43" style="--motor-i: 4;">
+                <a class="motor-cat-link" href="#" title="Yakıt &amp; Hava Sistemi kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">05</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-fuel"></use></svg>
+
+                    <span class="motor-cat-name">Yakıt &amp; Hava Sistemi</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="47" style="--motor-i: 5;">
+                <a class="motor-cat-link" href="#" title="Egzoz Sistemleri kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">06</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-exhaust"></use></svg>
+
+                    <span class="motor-cat-name">Egzoz Sistemleri</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="48" style="--motor-i: 6;">
+                <a class="motor-cat-link" href="#" title="Süspansiyon &amp; Direksiyon kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">07</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-suspension"></use></svg>
+
+                    <span class="motor-cat-name">Süspansiyon &amp; Direksiyon</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="52" style="--motor-i: 7;">
+                <a class="motor-cat-link" href="#" title="Kaporta &amp; Grenaj kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">08</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-fairing"></use></svg>
+
+                    <span class="motor-cat-name">Kaporta &amp; Grenaj</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="56" style="--motor-i: 8;">
+                <a class="motor-cat-link" href="#" title="Lastik &amp; Jant kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">09</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-tire"></use></svg>
+
+                    <span class="motor-cat-name">Lastik &amp; Jant</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="60" style="--motor-i: 9;">
+                <a class="motor-cat-link" href="#" title="Yağ &amp; Bakım kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">10</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-oil"></use></svg>
+
+                    <span class="motor-cat-name">Yağ &amp; Bakım</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="64" style="--motor-i: 10;">
+                <a class="motor-cat-link" href="#" title="Kask &amp; Sürücü Ekipmanı kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">11</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-helmet"></use></svg>
+
+                    <span class="motor-cat-name">Kask &amp; Sürücü Ekipmanı</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-cat" data-id="69" style="--motor-i: 11;">
+                <a class="motor-cat-link" href="#" title="Aksesuar kategorisindeki ürünleri göster">
+                    <span class="motor-cat-index" aria-hidden="true">12</span>
+                    
+
+
+<svg class="motor-cat-icon" aria-hidden="true" focusable="false"><use href="#mi-tool"></use></svg>
+
+                    <span class="motor-cat-name">Aksesuar</span>
+                    <span lang="tr" class="motor-cat-cta" aria-hidden="true">
+                        <span>İncele</span>
+                        <svg><use href="#mi-arrow"></use></svg>
+                    </span>
+                </a>
+            </div>
+    </div>
+        </section>
+        
+
+            
+        
+
+        
+<section lang="tr" class="motor-story" aria-labelledby="motor-story-title">
+    <div class="motor-story-bg" aria-hidden="true">
+        <img class="motor-story-photo" src="themes/motordark/images/story.jpg" alt="" width="2000" height="2667" decoding="async" data-motor-parallax="0.08">
+        <div class="motor-story-shade"></div>
+    </div>
+
+    <div class="container motor-story-inner">
+        <div class="motor-story-head" data-motor-reveal="">
+            <span class="motor-eyebrow">Garajdan yola</span>
+            <h2 id="motor-story-title" class="motor-story-title">
+                Her parça, bir sonraki <em>virajın</em> parçası.
+            </h2>
+            <p class="motor-story-lead">
+                İyi bir sürüş, doğru parçayla başlar. Bakım rutininden performans yükseltmesine,
+                sürücü güvenliğinden yol aksesuarlarına kadar ihtiyacını kategorilere ayırdık.
+            </p>
+            <div class="motor-story-actions">
+                <a href="#motor-categories" class="btn btn-primary btn-motor">
+                    <span>Kategorileri Keşfet</span>
+                    <svg class="motor-btn-arrow" aria-hidden="true"><use href="#mi-arrow"></use></svg>
+                </a>
+                <a class="btn btn-motor btn-motor-ghost" href="#">Parça Danış</a>
+            </div>
+        </div>
+
+        <ol class="motor-story-steps" data-motor-stagger="">
+            <li class="motor-story-step" style="--motor-i: 0;">
+                <span class="motor-story-num">01</span>
+                <svg class="motor-story-icon" aria-hidden="true"><use href="#mi-oil"></use></svg>
+                <h3>Bakım</h3>
+                <p>Yağ, filtre, buji ve balata gibi periyodik bakım parçaları.</p>
+            </li>
+            <li class="motor-story-step" style="--motor-i: 1;">
+                <span class="motor-story-num">02</span>
+                <svg class="motor-story-icon" aria-hidden="true"><use href="#mi-exhaust"></use></svg>
+                <h3>Performans</h3>
+                <p>Egzoz, hava ve yakıt sistemleri, aktarma ve süspansiyon parçaları.</p>
+            </li>
+            <li class="motor-story-step" style="--motor-i: 2;">
+                <span class="motor-story-num">03</span>
+                <svg class="motor-story-icon" aria-hidden="true"><use href="#mi-helmet"></use></svg>
+                <h3>Sürücü</h3>
+                <p>Kask, mont, eldiven ve bot ile yolda görünür ve korunaklı kal.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+
+            
+
+        
+
+
+            <section id="motor-brands" class="motor-section">
+                
+
+<div role="region" aria-labelledby="top-brands-title" class="motor-brands block">
+    <div lang="tr" class="motor-section-head" data-motor-reveal="">
+        <div>
+            <span class="motor-eyebrow">Markalar</span>
+            <h2 id="top-brands-title" class="motor-section-title">Markana göre alışveriş</h2>
+        </div>
+        <a class="motor-section-link" href="#">
+            Hepsini göster <svg aria-hidden="true"><use href="#mi-arrow"></use></svg>
+        </a>
+    </div>
+
+    <div role="list" class="motor-brand-grid" data-motor-stagger="">
+            <div role="listitem" class="motor-brand" data-id="19" style="--motor-i: 0;">
+                <a href="#" class="motor-brand-link" title="Honda">
+                        <span class="motor-brand-name">Honda</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="20" style="--motor-i: 1;">
+                <a href="#" class="motor-brand-link" title="Yamaha">
+                        <span class="motor-brand-name">Yamaha</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="21" style="--motor-i: 2;">
+                <a href="#" class="motor-brand-link" title="Kawasaki">
+                        <span class="motor-brand-name">Kawasaki</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="22" style="--motor-i: 3;">
+                <a href="#" class="motor-brand-link" title="Suzuki">
+                        <span class="motor-brand-name">Suzuki</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="23" style="--motor-i: 4;">
+                <a href="#" class="motor-brand-link" title="KTM">
+                        <span class="motor-brand-name">KTM</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="24" style="--motor-i: 5;">
+                <a href="#" class="motor-brand-link" title="Bajaj">
+                        <span class="motor-brand-name">Bajaj</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="25" style="--motor-i: 6;">
+                <a href="#" class="motor-brand-link" title="TVS">
+                        <span class="motor-brand-name">TVS</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="26" style="--motor-i: 7;">
+                <a href="#" class="motor-brand-link" title="Mondial">
+                        <span class="motor-brand-name">Mondial</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="27" style="--motor-i: 8;">
+                <a href="#" class="motor-brand-link" title="Kuba">
+                        <span class="motor-brand-name">Kuba</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="28" style="--motor-i: 9;">
+                <a href="#" class="motor-brand-link" title="RKS">
+                        <span class="motor-brand-name">RKS</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="29" style="--motor-i: 10;">
+                <a href="#" class="motor-brand-link" title="Arora">
+                        <span class="motor-brand-name">Arora</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="30" style="--motor-i: 11;">
+                <a href="#" class="motor-brand-link" title="Yuki">
+                        <span class="motor-brand-name">Yuki</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="31" style="--motor-i: 12;">
+                <a href="#" class="motor-brand-link" title="CFMOTO">
+                        <span class="motor-brand-name">CFMOTO</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="32" style="--motor-i: 12;">
+                <a href="#" class="motor-brand-link" title="Kymco">
+                        <span class="motor-brand-name">Kymco</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="33" style="--motor-i: 12;">
+                <a href="#" class="motor-brand-link" title="SYM">
+                        <span class="motor-brand-name">SYM</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="34" style="--motor-i: 12;">
+                <a href="#" class="motor-brand-link" title="Vespa">
+                        <span class="motor-brand-name">Vespa</span>
+                </a>
+            </div>
+            <div role="listitem" class="motor-brand" data-id="35" style="--motor-i: 12;">
+                <a href="#" class="motor-brand-link" title="Piaggio">
+                        <span class="motor-brand-name">Piaggio</span>
+                </a>
+            </div>
+    </div>
+</div>
+
+            </section>
+        
+
+        
+
+    <section lang="tr" class="motor-assurance" aria-label="Alışveriş güvencesi">
+        <ul class="motor-assurance-list" data-motor-stagger="">
+                <li class="motor-assurance-item" style="--motor-i: 0;">
+                    <svg class="motor-assurance-icon" aria-hidden="true"><use href="#mi-truck"></use></svg>
+                    <div>
+                        <h3 class="motor-assurance-title">Kargo &amp; İade</h3>
+                        <p class="motor-assurance-text">Gönderim, teslimat ve iade koşullarını önceden öğren.</p>
+                        <a class="motor-assurance-link" href="#">Koşulları incele <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+                <li class="motor-assurance-item" style="--motor-i: 1;">
+                    <svg class="motor-assurance-icon" aria-hidden="true"><use href="#mi-shield"></use></svg>
+                    <div>
+                        <h3 class="motor-assurance-title">Ödeme Seçenekleri</h3>
+                        <p class="motor-assurance-text">Kullanılabilir ödeme yöntemlerini ve ödeme sürecini gör.</p>
+                        <a class="motor-assurance-link" href="#">Ödeme bilgileri <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+                <li class="motor-assurance-item" style="--motor-i: 2;">
+                    <svg class="motor-assurance-icon" aria-hidden="true"><use href="#mi-return"></use></svg>
+                    <div>
+                        <h3 class="motor-assurance-title">Sipariş Takibi</h3>
+                        <p class="motor-assurance-text">Siparişlerinin durumunu hesabından takip et.</p>
+                        <a class="motor-assurance-link" href="#">Siparişlerim <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+                <li class="motor-assurance-item" style="--motor-i: 3;">
+                    <svg class="motor-assurance-icon" aria-hidden="true"><use href="#mi-headset"></use></svg>
+                    <div>
+                        <h3 class="motor-assurance-title">Parça Danışmanlığı</h3>
+                        <p class="motor-assurance-text">Doğru parçadan emin değil misin? Bize yaz.</p>
+                        <a class="motor-assurance-link" href="#">İletişime geç <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+        </ul>
+    </section>
+
+
+        
+
+        
+        
+
+        
+
+        
+    </div>
+</div>
+
+                        
+                    </main>
+
+
+                    
+                </div>
+            </section>
+        </div>
+
+        
+
+        
+            
+
+
+<footer id="footer" class="footer-inverse">
+
+    
+    <div lang="tr" class="motor-footer-brand">
+        <div class="container">
+            <div class="motor-footer-brand-inner">
+                <div class="motor-footer-claim">Her virajda<br><em>bir adım önde.</em></div>
+                <p class="motor-footer-note">
+                    Motosikletin için parça, bakım ve sürücü ekipmanı. Aradığını bulamazsan bize yaz; doğru parçayı birlikte bulalım.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="footer-social-wrapper" aria-label="Sosyal medya kanallarımız">
+        <div class="container footer-social">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="d-flex flex-wrap justify-content-center">
+                            <a href="#" target="_blank" rel="noopener" class="btn btn-icon rounded-circle btn-flat btn-social btn-brand-facebook-f" title="Facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn btn-icon rounded-circle btn-flat btn-social btn-brand-x-twitter" title="X (Twitter)" aria-label="X (Twitter)">
+                                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn btn-icon rounded-circle btn-flat btn-social btn-brand-instagram" title="Instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn btn-icon rounded-circle btn-flat btn-social btn-brand-tiktok" title="TikTok" aria-label="TikTok">
+                                <i class="fab fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="noopener" class="btn btn-icon rounded-circle btn-flat btn-social btn-brand-youtube" title="Youtube" aria-label="Youtube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="footer-main-wrapper">
+        <div class="container footer-main">
+            <div class="row sm-gutters">
+
+                <div class="col-md-4 col-lg-3">
+                    <nav class="footer-links nav-collapsible" aria-labelledby="footer-info-heading">
+                        <h3 id="footer-info-heading" class="footer-title nav-toggler collapsed h4" data-toggle="collapse" data-target="#footer-info" data-aria-controls="footer-info">
+                            Bilgiler
+                        </h3>
+                        <div class="collapse nav-collapse" id="footer-info" role="region" aria-labelledby="footer-info-heading">
+                            
+
+
+<div class="cms-menu cms-menu-linklist" data-menu-name="footerınformation">
+    <ul class="list-unstyled">
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>What's New</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Recently viewed products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Compare products list</span>
+                </a>
+            </li>
+    </ul>
+</div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <nav class="footer-links nav-collapsible" aria-labelledby="footer-service-heading">
+                        <h3 id="footer-service-heading" class="footer-title nav-toggler collapsed h4" data-toggle="collapse" data-target="#footer-service" data-aria-controls="footer-service">
+                            <span class="d-none d-md-block">Hizmet</span>
+                            <span class="d-md-none">Hizmet</span>
+                        </h3>
+                        <div class="collapse nav-collapse" id="footer-service" role="region" aria-labelledby="footer-service-heading">
+                            
+
+
+<div class="cms-menu cms-menu-linklist" data-menu-name="footerservice">
+    <ul class="list-unstyled">
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Contact us</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Shipping &amp; Returns</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Payment info</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link cookie-manager" rel="nofollow">
+
+                    <span>Cookie Manager</span>
+                </a>
+            </li>
+    </ul>
+</div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <nav class="footer-links nav-collapsible" aria-labelledby="footer-company-heading">
+                        <h3 id="footer-company-heading" class="footer-title nav-toggler collapsed h4" data-toggle="collapse" data-target="#footer-company" data-aria-controls="footer-company">
+                            <span class="d-none d-md-block">Şirket</span>
+                            <span class="d-md-none">Şirket</span>
+                        </h3>
+                        <div class="collapse nav-collapse" id="footer-company" role="region" aria-labelledby="footer-company-heading">
+                            
+
+
+<div class="cms-menu cms-menu-linklist" data-menu-name="footercompany">
+    <ul class="list-unstyled">
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Imprint</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Disclaimer</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Privacy policy</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
+
+                    <span>Conditions of use</span>
+                </a>
+            </li>
+    </ul>
+</div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    
+
+                    <div class="row gx-md-4 gy-md-3">
+                        <div class="col-12 col-md col-lg-12">
+                            <form id="newsletter-form" method="post" data-subscription-failure="Abonelik veya abonelik iptali başarısız oldu." aria-labelledby="newsletter-subscribe-heading" data-token-fieldname="__hpToken" action="#" data-ajax-url="/newsletter/subscribe/" data-ajax-method="post" novalidate="novalidate">
+                                
+                                <div class="footer-newsletter nav-collapsible">
+                                    <h3 id="newsletter-subscribe-heading" class="footer-title nav-toggler collapsed h4" data-toggle="collapse" data-target="#newsletter-body" data-aria-controls="newsletter-body">
+                                        Bültene abone ol
+                                    </h3>
+                                    <div id="newsletter-body" class="collapse nav-collapse pb-2" role="region" aria-labelledby="newsletter-subscribe-heading">
+                                        <div id="newsletter-subscribe-block" class="vstack gap-2">
+                                            <div class="input-group has-icon shadow-xs rounded-pill">
+                                                <input type="email" class="rounded-start-pill form-control" placeholder="E-posta" aria-label="E-posta" autocomplete="email" id="newsletter-email" name="NewsletterEmail" value="">
+                                                <span class="input-group-icon text-muted" style="--inline-icon-offset: 4px">
+                                                    <i class="far fa-envelope" aria-hidden="true"></i>
+                                                </span>
+                                                <span class="input-group-append">
+                                                    <span class="input-group-inline-addon rounded-end-pill">
+                                                        <button id="newsletter-subscribe-button" type="submit" class="btn btn-primary btn-prevent-multiclick">
+                                                            <span>Gönder</span>
+                                                        </button>
+                                                    </span>
+                                                </span>
+                                            </div>
+
+                                            <fieldset>
+                                                <legend class="sr-only">Eylem seçin</legend>
+                                                <div class="hstack">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" id="newsletter-subscribe" name="optionsRadios" value="newsletter-subscribe" checked="checked">
+                                                        <label class="form-check-label" for="newsletter-subscribe">
+                                                            <span>Abone ol</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" id="newsletter-unsubscribe" name="optionsRadios" value="newsletter-unsubscribe">
+                                                        <label class="form-check-label" for="newsletter-unsubscribe">
+                                                            <span>Abonelikten ayrıl</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+
+                                            
+
+
+<div class="form-group gdpr-consent mb-0 small">
+    <div class="form-check mb-0">
+        <input class="gdpr-consent-check form-check-input" data-form-type="consent,privacy_policy" type="checkbox" data-val="true" data-val-required=" 'GdprConsent' gereklidir." id="gdpr-consent-1691374594" name="GdprConsent" value="true"><input name="GdprConsent" type="hidden" value="false">
+        <label class="form-check-label" for="gdpr-consent-1691374594">
+            <a href="#">Gizlilik politikasını</a> kabul ediyorum.
+        </label>
+    </div>
+    <span class="field-validation-valid" data-valmsg-for="GdprConsent" data-valmsg-replace="true" role="alert"></span>
+</div>
+
+                                            <span class="field-validation-valid" data-valmsg-for="NewsletterEmail" data-valmsg-replace="true" role="alert"></span>
+                                        </div>
+                                        <div id="newsletter-result-block" class="alert alert-success d-none mt-2" role="status" aria-live="polite"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-12 col-md col-lg-12">
+                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="footer-bottom-wrapper">
+        <div class="container footer-bottom">
+            <div class="hstack column-gap-3 row-gap-1 justify-content-between flex-wrap flex-md-nowrap">
+                <div id="footer-legal-info">
+                    * Tüm fiyatlar KDV hariç, artı  <a href="#">nakliye</a>
+                </div>
+
+                <div>
+                    <a href="#" class="sm-hint"><strong>Shopsystem</strong></a> by SmartStore AG © 2026
+                </div>
+
+                <div>
+                    Telif © 2026 MotoParça. Tüm hakları saklıdır.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+
+        
+    </div>
+
+    <a href="#" id="scroll-top" class="scrollto d-flex align-items-center justify-content-center" aria-label="Yukarı kaydır">
+        <i class="fa fa-lg fa-angle-up"></i>
+    </a>
+    <span id="sr-desc-empty" class="sr-only"></span>
+    <span id="sr-status" class="sr-only" role="status" aria-live="polite"></span>
+</div>
+
+
+
+
+    
+
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+    
+
+
+
+
+<script>
+/*
+ * MotorDark theme enhancements.
+ * Progressive enhancement only: the storefront works fully without this file.
+ * - Sticky header state, scroll progress and measured header height
+ * - Scroll reveal and staggered entrances (IntersectionObserver)
+ * - Hero entrance and photo parallax
+ * - Add-to-cart feedback hooked into Smartstore's EventBroker
+ */
+(function () {
+    'use strict';
+
+    var doc = document.documentElement;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.MotorTheme = { version: '1.0' };
+    doc.classList.add('motor-js');
+
+    function onReady(fn) {
+        if (document.readyState !== 'loading') {
+            fn();
+        }
+        else {
+            document.addEventListener('DOMContentLoaded', fn);
+        }
+    }
+
+    // Header: height, scrolled state, progress
+    // ---------------------------------------------
+
+    function initHeader() {
+        var header = document.getElementById('header');
+        if (!header) return;
+
+        var body = document.body;
+        var ticking = false;
+        // Photos that drift slower than the page (data-motor-parallax="<factor>")
+        var layers = reduceMotion ? [] : Array.prototype.map.call(document.querySelectorAll('[data-motor-parallax]'), function (el) {
+            return {
+                el: el,
+                factor: parseFloat(el.getAttribute('data-motor-parallax')) || 0.1,
+                frame: el.closest('section') || el.parentElement,
+                pinned: !!el.closest('[data-motor-hero]')
+            };
+        });
+
+        function measure() {
+            doc.style.setProperty('--motor-header-h', header.offsetHeight + 'px');
+        }
+
+        function update() {
+            ticking = false;
+
+            var y = window.scrollY || window.pageYOffset;
+            var max = Math.max(1, doc.scrollHeight - window.innerHeight);
+
+            body.classList.toggle('motor-scrolled', y > 8);
+            header.style.setProperty('--motor-progress', Math.min(1, y / max).toFixed(4));
+
+            var vh = window.innerHeight;
+            layers.forEach(function (layer) {
+                var rect = layer.frame.getBoundingClientRect();
+                if (rect.bottom < 0 || rect.top > vh) return;
+
+                // The hero starts at rest and drifts as it scrolls away; other sections
+                // drift around the viewport centre.
+                var offset = layer.pinned
+                    ? Math.max(0, -rect.top) * layer.factor
+                    : -(rect.top + rect.height / 2 - vh / 2) * layer.factor;
+
+                layer.el.style.setProperty('--motor-parallax', offset.toFixed(1) + 'px');
+            });
+        }
+
+        function requestUpdate() {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(update);
+            }
+        }
+
+        measure();
+        update();
+
+        window.addEventListener('scroll', requestUpdate, { passive: true });
+        window.addEventListener('resize', function () {
+            measure();
+            requestUpdate();
+        }, { passive: true });
+
+        if ('ResizeObserver' in window) {
+            new ResizeObserver(measure).observe(header);
+        }
+    }
+
+    // Reveal & stagger
+    // ---------------------------------------------
+
+    function initReveal() {
+        var targets = Array.prototype.slice.call(document.querySelectorAll('[data-motor-reveal], [data-motor-stagger]'));
+        if (!targets.length) return;
+
+        targets.forEach(function (el) {
+            if (el.hasAttribute('data-motor-stagger')) {
+                Array.prototype.forEach.call(el.children, function (child, i) {
+                    child.style.setProperty('--motor-i', Math.min(i, 12));
+                });
+            }
+        });
+
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            targets.forEach(function (el) { el.classList.add('is-inview'); });
+            return;
+        }
+
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-inview');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+        targets.forEach(function (el) { io.observe(el); });
+    }
+
+    // Hero
+    // ---------------------------------------------
+
+    function initHero() {
+        var hero = document.querySelector('[data-motor-hero]');
+        if (!hero) return;
+
+        // Start the entrance once the photo is decoded (or after a short fallback),
+        // so the "develop from black" transition never plays over an empty frame.
+        var started = false;
+        function start() {
+            if (started) return;
+            started = true;
+            window.requestAnimationFrame(function () {
+                hero.classList.add('is-ready');
+            });
+        }
+
+        var photo = hero.querySelector('.motor-hero-photo');
+        if (!photo || photo.complete) {
+            start();
+        }
+        else {
+            photo.addEventListener('load', start, { once: true });
+            photo.addEventListener('error', start, { once: true });
+            setTimeout(start, 1500);
+        }
+
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (entries) {
+                hero.classList.toggle('is-offscreen', !entries[0].isIntersecting);
+            }).observe(hero);
+        }
+
+        // Smooth in-page jumps from hero CTAs, offset by the sticky header
+        hero.addEventListener('click', function (e) {
+            var link = e.target.closest('a[href^="#"]');
+            if (!link) return;
+
+            var target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+
+            e.preventDefault();
+            var offset = (parseInt(getComputedStyle(doc).getPropertyValue('--motor-header-h'), 10) || 0) + 16;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+            window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
+            if (history.replaceState) {
+                history.replaceState(null, '', link.getAttribute('href'));
+            }
+        });
+    }
+
+    // Add-to-cart / wishlist feedback
+    // ---------------------------------------------
+
+    function initCartFeedback() {
+        if (!window.EventBroker || !window.EventBroker.subscribe) return;
+
+        EventBroker.subscribe('ajaxcart.item.added', function (msg, cmd) {
+            var src = cmd && cmd.src && cmd.src[0];
+            var type = (cmd && cmd.type) || 'cart';
+
+            if (src && src.classList && src.classList.contains('btn')) {
+                src.classList.add('motor-btn-done');
+                setTimeout(function () { src.classList.remove('motor-btn-done'); }, 1400);
+
+                var card = src.closest('.art');
+                if (card && !reduceMotion) {
+                    card.classList.remove('motor-added');
+                    void card.offsetWidth;
+                    card.classList.add('motor-added');
+                }
+            }
+
+            if (!reduceMotion) {
+                var badge = document.querySelector('#shopbar-' + type + ' .badge-counter');
+                if (badge) {
+                    badge.classList.remove('motor-badge-bump');
+                    void badge.offsetWidth;
+                    badge.classList.add('motor-badge-bump');
+                }
+            }
+        });
+    }
+
+    onReady(function () {
+        initHeader();
+        initReveal();
+        initHero();
+        initCartFeedback();
+    });
+})();
+
+</script>
+<script>
+// Interface preview: links and forms are inert, sections never stay hidden.
+document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href="#"]');
+    if (a) e.preventDefault();
+});
+document.addEventListener('submit', function (e) { e.preventDefault(); });
+setTimeout(function () {
+    document.querySelectorAll('[data-motor-reveal], [data-motor-stagger]').forEach(function (el) { el.classList.add('is-inview'); });
+}, 1600);
+// Background tabs pause requestAnimationFrame; make sure the hero still settles.
+setTimeout(function () {
+    var hero = document.querySelector('[data-motor-hero]');
+    if (hero) hero.classList.add('is-ready');
+}, 900);
+</script>
+
+</body>
+</html>
